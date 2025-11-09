@@ -130,7 +130,7 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 	margin-bottom: 5%;
 	background-color: var(--color-primary);
 	border-radius: 5px;
-	border: 2px solid rgba(255, 255, 1, 0.8);
+	border: 1px solid #82823C;
 	filter: drop-shadow(0 6px 16px rgba(0,0,0,0.55));
 }
 
@@ -620,6 +620,13 @@ a {
 
 .hero-content {
 	max-width: 520px;
+	transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.hero-content.is-hidden {
+	opacity: 0;
+	transform: translateY(-16px);
+	pointer-events: none;
 }
 
 .hero-eyebrow {
