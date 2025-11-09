@@ -21,15 +21,26 @@
                         <i class="fa fa-solid fa-list" aria-hidden="true"></i> Sections
                         <i class="fa fa-solid fa-chevron-down" aria-hidden="true"></i>
                     </a>
-                    <div class="af-dropdown-content" id="primary-sections-menu" role="menu" hidden>
-                        <a href="#home" class="af-bar-item af-button" role="menuitem">Accueil</a>
-                        <a href="#button" class="af-bar-item af-button" role="menuitem">Boutons d'informations</a>
-                        <a href="#certifications" class="af-bar-item af-button" role="menuitem">Certifications</a>
-                        <a href="#contact" class="af-bar-item af-button" role="menuitem">Contact &amp; Accès</a>
+                    <div class="af-dropdown-content" id="primary-sections-menu" role="menu" aria-hidden="true">
+                        <a href="#horaires" class="af-bar-item af-button" role="menuitem">
+                            <i class="fa fa-solid fa-clock" aria-hidden="true"></i>
+                            HORAIRES
+                        </a>
+                        <a href="#cours-collectifs" class="af-bar-item af-button" role="menuitem">
+                            <i class="fa fa-solid fa-people-group" aria-hidden="true"></i>
+                            COURS COLLECTIFS
+                        </a>
+                        <a href="#team-olympia" class="af-bar-item af-button" role="menuitem">
+                            <i class="fa fa-solid fa-users" aria-hidden="true"></i>
+                            LA TEAM OLYMPIA
+                        </a>
+                        <a href="#tarifs" class="af-bar-item af-button" role="menuitem">
+                            <i class="fa fa-solid fa-tags" aria-hidden="true"></i>
+                            TARIFS
+                        </a>
                     </div>
                 </div>
-                <a href="#button" class="af-bar-item af-button"><i class="fa fa-solid fa-circle-info" aria-hidden="true"></i> Button</a>
-                <a href="#certifications" class="af-bar-item af-button"><i class="fa fa-solid fa-utensils" aria-hidden="true"></i> Certifications</a>
+                <a href="#certifications" class="af-bar-item af-button"><i class="fa fa-solid fa-certificate" aria-hidden="true"></i> Certification</a>
                 <a href="#contact" class="af-bar-item af-button"><i class="fa fa-solid fa-location-dot" aria-hidden="true"></i> Contact</a>
             </div>
             <button type="button" class="af-bar-item af-button af-hide-large af-hide-medium menu-toggle" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu(event)" style="margin-left:auto;" aria-label="Ouvrir le menu">
@@ -46,11 +57,6 @@
 
     <!-- Hero retains the brand promise -->
     <header class="site-header" id="home">
-        <div class="hero-slider" aria-hidden="true">
-            <img src="images/background.jpg" alt="" class="hero-slide is-active">
-            <img src="images/photoContact.jpg" alt="" class="hero-slide">
-            <img src="images/photoFitness.jpg" alt="" class="hero-slide">
-        </div>
         <div class="hero">
             <div class="hero-content">
                 <p class="hero-eyebrow">Olympia Fitness</p>
@@ -76,17 +82,17 @@
             <div class="section-content">
                 <!-- Responsive grid: 4/2/1 cards -->
                 <div class="features-grid">
-                    <article class="feature-card feature-card--image">
-                        <img src="images/buttonTarifs.png" alt="Bouton des tarifs Olympia Fitness" loading="lazy">
-                    </article>
-                    <article class="feature-card feature-card--image">
+                    <article class="feature-card feature-card--image" id="horaires">
                         <img src="images/buttonHoraire.png" alt="Bouton des horaires Olympia Fitness" loading="lazy">
                     </article>
-                    <article class="feature-card feature-card--image">
+                    <article class="feature-card feature-card--image" id="cours-collectifs">
                         <img src="images/buttonCoursCollectifs.png" alt="Bouton des cours collectifs Olympia Fitness" loading="lazy">
                     </article>
-                    <article class="feature-card feature-card--image">
+                    <article class="feature-card feature-card--image" id="team-olympia">
                         <img src="images/buttonTeamOlympia.png" alt="Bouton de l'&eacute;quipe Olympia Fitness" loading="lazy">
+                    </article>
+                    <article class="feature-card feature-card--image" id="tarifs">
+                        <img src="images/buttonTarifs.png" alt="Bouton des tarifs Olympia Fitness" loading="lazy">
                     </article>
                 </div>
             </div>
@@ -107,7 +113,6 @@
                             <li>Installations contr&ocirc;l&eacute;es et conformes aux crit&egrave;res de qualit&eacute; Fitness Guide.</li>
                             <li>Encadrement professionnel garanti par des coachs qualifi&eacute;s.</li>
                         </ul>
-                        <a class="cert-card__link" href="https://www.fitness-guide.ch/fr/home" target="_blank" rel="noopener">Voir les crit&egrave;res Fitness Guide</a>
                     </aside>
                 </div>
             </div>
@@ -228,63 +233,10 @@
                 });
 
                 window.addEventListener('resize', function () {
-                    if (window.innerWidth > 900 && mobileMenu.classList.contains('is-open')) {
+                    if (window.innerWidth > 999 && mobileMenu.classList.contains('is-open')) {
                         closeMenu();
                     }
                 });
-            })();
-
-            (function () {
-                var slider = document.querySelector('.hero-slider');
-                if (!slider) {
-                    return;
-                }
-
-                var slides = slider.querySelectorAll('.hero-slide');
-                if (slides.length === 0) {
-                    return;
-                }
-
-                var activeIndex = 0;
-                var delay = 3000;
-                var intervalId = null;
-
-                slides[activeIndex].classList.add('is-active');
-
-                function showNextSlide() {
-                    slides[activeIndex].classList.remove('is-active');
-                    activeIndex = (activeIndex + 1) % slides.length;
-                    slides[activeIndex].classList.add('is-active');
-                }
-
-                function startSlider() {
-                    if (intervalId !== null) {
-                        return;
-                    }
-
-                    intervalId = window.setInterval(showNextSlide, delay);
-                }
-
-                function stopSlider() {
-                    if (intervalId === null) {
-                        return;
-                    }
-
-                    window.clearInterval(intervalId);
-                    intervalId = null;
-                }
-
-                if (slides.length > 1) {
-                    startSlider();
-
-                    document.addEventListener('visibilitychange', function () {
-                        if (document.hidden) {
-                            stopSlider();
-                        } else {
-                            startSlider();
-                        }
-                    });
-                }
             })();
 
             (function () {
@@ -303,26 +255,75 @@
                 var minWidth = 220;
                 var supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
                 var scheduled = false;
+                var closeAnimationTimeout = null;
+
+                function cleanupAfterClose() {
+                    menu.classList.remove('is-closing');
+                    menu.style.visibility = '';
+
+                    if (!isOpen) {
+                        menu.style.left = '';
+                        menu.style.top = '';
+                        menu.style.minWidth = '';
+                    }
+                }
+
+                function handleTransitionEnd(event) {
+                    if (event.target !== menu) {
+                        return;
+                    }
+
+                    if (event.propertyName !== 'max-height' && event.propertyName !== 'opacity') {
+                        return;
+                    }
+
+                    cleanupAfterClose();
+                }
+
+                function cancelCloseCleanup() {
+                    menu.removeEventListener('transitionend', handleTransitionEnd);
+                    if (closeAnimationTimeout !== null) {
+                        clearTimeout(closeAnimationTimeout);
+                        closeAnimationTimeout = null;
+                    }
+                }
+
+                function scheduleCloseCleanup() {
+                    cancelCloseCleanup();
+                    menu.addEventListener('transitionend', handleTransitionEnd);
+                    closeAnimationTimeout = window.setTimeout(function () {
+                        cleanupAfterClose();
+                    }, 320);
+                }
 
                 function setPosition() {
                     if (!isOpen) {
                         return;
                     }
 
-                    var rect = toggle.getBoundingClientRect();
                     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
                     var viewportMargin = 12;
-                    var width = Math.max(rect.width, minWidth);
-                    menu.style.minWidth = width + 'px';
+                    var gap = 8;
+                    var width = Math.max(toggle.offsetWidth, minWidth);
+                    var dropdownRect = dropdown.getBoundingClientRect();
+                    var left = 0;
 
-                    var menuWidth = menu.offsetWidth || width;
-                    var left = rect.left;
-                    if (left + menuWidth + viewportMargin > viewportWidth) {
-                        left = Math.max(viewportMargin, viewportWidth - menuWidth - viewportMargin);
+                    var menuLeft = dropdownRect.left + left;
+                    var menuRight = menuLeft + width;
+
+                    if (menuRight + viewportMargin > viewportWidth) {
+                        left -= (menuRight + viewportMargin) - viewportWidth;
+                        menuLeft = dropdownRect.left + left;
+                        menuRight = menuLeft + width;
                     }
 
+                    if (menuLeft - viewportMargin < 0) {
+                        left += viewportMargin - menuLeft;
+                    }
+
+                    menu.style.minWidth = width + 'px';
                     menu.style.left = left + 'px';
-                    menu.style.top = rect.bottom + 2 + 'px';
+                    menu.style.top = dropdown.offsetHeight + gap + 'px';
                 }
 
                 function schedulePositionUpdate() {
@@ -342,12 +343,21 @@
                         return;
                     }
 
+                    cancelCloseCleanup();
+                    menu.classList.remove('is-closing');
                     isOpen = true;
                     dropdown.setAttribute('data-dropdown-open', 'true');
-                    menu.hidden = false;
+                    menu.classList.add('is-open');
+                    menu.setAttribute('aria-hidden', 'false');
                     menu.style.visibility = 'hidden';
                     setPosition();
-                    menu.style.visibility = '';
+                    if (typeof requestAnimationFrame === 'function') {
+                        requestAnimationFrame(function () {
+                            menu.style.visibility = '';
+                        });
+                    } else {
+                        menu.style.visibility = '';
+                    }
                     toggle.setAttribute('aria-expanded', 'true');
                 }
 
@@ -358,11 +368,11 @@
 
                     isOpen = false;
                     dropdown.removeAttribute('data-dropdown-open');
-                    menu.hidden = true;
-                    menu.style.left = '-9999px';
-                    menu.style.top = '-9999px';
-                    menu.style.minWidth = '';
+                    menu.classList.add('is-closing');
+                    menu.classList.remove('is-open');
+                    menu.setAttribute('aria-hidden', 'true');
                     toggle.setAttribute('aria-expanded', 'false');
+                    scheduleCloseCleanup();
                 }
 
                 toggle.addEventListener('click', function (event) {
