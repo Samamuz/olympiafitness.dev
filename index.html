@@ -419,6 +419,37 @@
                 });
             })();
 
+            (function () {
+                var heroContent = document.querySelector('.hero-content');
+                if (!heroContent) {
+                    return;
+                }
+
+                var threshold = 120;
+                var lastKnownScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+                var ticking = false;
+
+                function update() {
+                    ticking = false;
+                    if (lastKnownScrollY > threshold) {
+                        heroContent.classList.add('is-hidden');
+                    } else {
+                        heroContent.classList.remove('is-hidden');
+                    }
+                }
+
+                function onScroll() {
+                    lastKnownScrollY = window.scrollY || document.documentElement.scrollTop || 0;
+                    if (!ticking) {
+                        window.requestAnimationFrame(update);
+                        ticking = true;
+                    }
+                }
+
+                window.addEventListener('scroll', onScroll, { passive: true });
+                update();
+            })();
+
         </script>
 </body>
 </html>
