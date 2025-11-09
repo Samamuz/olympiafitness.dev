@@ -253,7 +253,6 @@
 
                 var isOpen = false;
                 var minWidth = 220;
-                var supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
                 var scheduled = false;
                 var closeAnimationTimeout = null;
 
@@ -383,11 +382,6 @@
                         openMenu();
                     }
                 });
-
-                if (supportsHover) {
-                    dropdown.addEventListener('mouseenter', openMenu);
-                    dropdown.addEventListener('mouseleave', closeMenu);
-                }
 
                 document.addEventListener('click', function (event) {
                     if (!isOpen) {
