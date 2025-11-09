@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Olympia Fitness &agrave; Sembrancher : 330 m2 d&apos;entra&icirc;nement, mat&eacute;riel Technogym et Precor, coaching personnalis&eacute;, cours collectifs et acc&egrave;s &eacute;tendu de 5 h &agrave; 23 h.">
+    <title>Olympia Fitness | Salle de sport &agrave; Sembrancher</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+</head>
+<body>
+    <div class="af-top">
+        <div class="af-bar af-white af-card" id="myNavbar">
+            <a href="#home" class="af-bar-item af-button logo-link" style="padding:0 12px; margin-right:20px;">
+                <img src="images/logo.png" alt="Olympia Fitness" class="navbar-logo" width="200" height="80" loading="lazy">
+            </a>
+            <div class="af-hide-small navbar-links" aria-label="Navigation principale">
+                <div class="af-dropdown-hover" aria-haspopup="true" data-dropdown>
+                    <a href="javascript:void(0)" class="af-bar-item af-button af-dropdown-toggle" aria-expanded="false" aria-controls="primary-sections-menu">
+                        <i class="fa fa-solid fa-list" aria-hidden="true"></i> Sections
+                        <i class="fa fa-solid fa-chevron-down" aria-hidden="true"></i>
+                    </a>
+                    <div class="af-dropdown-content" id="primary-sections-menu" role="menu" hidden>
+                        <a href="#home" class="af-bar-item af-button" role="menuitem">Accueil</a>
+                        <a href="#button" class="af-bar-item af-button" role="menuitem">Boutons d'informations</a>
+                        <a href="#certifications" class="af-bar-item af-button" role="menuitem">Certifications</a>
+                        <a href="#contact" class="af-bar-item af-button" role="menuitem">Contact &amp; Accès</a>
+                    </div>
+                </div>
+                <a href="#button" class="af-bar-item af-button"><i class="fa fa-solid fa-circle-info" aria-hidden="true"></i> Button</a>
+                <a href="#certifications" class="af-bar-item af-button"><i class="fa fa-solid fa-utensils" aria-hidden="true"></i> Certifications</a>
+                <a href="#contact" class="af-bar-item af-button"><i class="fa fa-solid fa-location-dot" aria-hidden="true"></i> Contact</a>
+            </div>
+            <button type="button" class="af-bar-item af-button af-hide-large af-hide-medium menu-toggle" aria-controls="mobileMenu" aria-expanded="false" onclick="toggleMobileMenu(event)" style="margin-left:auto;" aria-label="Ouvrir le menu">
+                <i class="fa fa-solid fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="mobile-menu af-hide-medium af-hide-large" id="mobileMenu" aria-hidden="true">
+            <a href="#home" onclick="closeMobileMenu()" class="af-bar-item af-button">Accueil</a>
+            <a href="#button" onclick="closeMobileMenu()" class="af-bar-item af-button">Informations</a>
+            <a href="#certifications" onclick="closeMobileMenu()" class="af-bar-item af-button">Certifications</a>
+            <a href="#contact" onclick="closeMobileMenu()" class="af-bar-item af-button">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Hero retains the brand promise -->
+    <header class="site-header" id="home">
+        <div class="hero-slider" aria-hidden="true">
+            <img src="images/background.jpg" alt="" class="hero-slide is-active">
+            <img src="images/photoContact.jpg" alt="" class="hero-slide">
+            <img src="images/photoFitness.jpg" alt="" class="hero-slide">
+        </div>
+        <div class="hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Olympia Fitness</p>
+                <h1>Ton objectif, <span class="highlight-mission">notre mission.</span></h1>
+                <p>Plus de 330 m<sup>2</sup> d&apos;entra&icirc;nement, du mat&eacute;riel de haute qualit&eacute; et une &eacute;quipe qui vous suit personnellement.</p>
+                <div class="hero-actions">
+                    <a class="btn" href="#button">D'avantages d'informations</a>
+                    <a class="btn btn--ghost" href="#contact">Nous contacter</a>
+                </div>
+            </div>
+        </div>
+        <div class="hero-social af-display-bottomright af-text-grey af-large" style="padding: 30px 48px;">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="af-hover-opacity" aria-label="Facebook">
+                <i class="fa fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="af-hover-opacity" aria-label="Instagram">
+                <i class="fa fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+    </header>
+    <main>
+    <section id="button" class="contact-section af-container af-light-grey">
+            <div class="section-content">
+                <!-- Responsive grid: 4/2/1 cards -->
+                <div class="features-grid">
+                    <article class="feature-card feature-card--image">
+                        <img src="images/buttonTarifs.png" alt="Bouton des tarifs Olympia Fitness" loading="lazy">
+                    </article>
+                    <article class="feature-card feature-card--image">
+                        <img src="images/buttonHoraire.png" alt="Bouton des horaires Olympia Fitness" loading="lazy">
+                    </article>
+                    <article class="feature-card feature-card--image">
+                        <img src="images/buttonCoursCollectifs.png" alt="Bouton des cours collectifs Olympia Fitness" loading="lazy">
+                    </article>
+                    <article class="feature-card feature-card--image">
+                        <img src="images/buttonTeamOlympia.png" alt="Bouton de l'&eacute;quipe Olympia Fitness" loading="lazy">
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section id="certifications" class="section section--accent">
+            <div class="section-content">
+                <div class="cert-layout">
+                    <div class="cert-layout__text">
+                        <h2 class="section-title">Certification 3 &eacute;toiles</h2>
+                        <p class="cert-layout__lead">Olympia Fitness est reconnu par <a href="https://www.fitness-guide.ch/fr/home" target="_blank" rel="noopener">Fitness Guide</a>, la r&eacute;f&eacute;rence suisse qui valide les infrastructures et l&apos;encadrement des centres de remise en forme.</p>
+                        <p>Cette distinction confirme la qualit&eacute; de nos 330&nbsp;m<sup>2</sup> d&apos;entra&icirc;nement &eacute;quip&eacute;s Technogym et Precor, ainsi que l&apos;accompagnement propos&eacute; par notre &eacute;quipe de coachs dipl&ocirc;m&eacute;s.</p>
+                        <p>Elle vous permet &eacute;galement de profiter d&apos;un remboursement partiel de votre abonnement via de nombreuses caisses maladie partenaires.</p>
+                    </div>
+                    <aside class="cert-layout__card" aria-label="Avantages de la certification">
+                        <h3 class="cert-card__title">Vos avantages</h3>
+                        <ul class="cert-card__list">
+                            <li>Prise en charge financ&egrave;re possible aupr&egrave;s de votre assurance sant&eacute;.</li>
+                            <li>Installations contr&ocirc;l&eacute;es et conformes aux crit&egrave;res de qualit&eacute; Fitness Guide.</li>
+                            <li>Encadrement professionnel garanti par des coachs qualifi&eacute;s.</li>
+                        </ul>
+                        <a class="cert-card__link" href="https://www.fitness-guide.ch/fr/home" target="_blank" rel="noopener">Voir les crit&egrave;res Fitness Guide</a>
+                    </aside>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="contact-section af-container af-light-grey">
+            <h2 class="section-title af-center">Contact &amp; Acc&egrave;s</h2>
+            <div class="map-row" aria-label="Carte et coordonn&eacute;es - Olympia Fitness">
+                <div class="map-container" aria-hidden="false">
+                    <iframe
+                        title="Localisation - Olympia Fitness"
+                        src="https://www.google.com/maps?q=Olympia+Fitness+Sembrancher&amp;output=embed&amp;t=k"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+                <div class="map-info" aria-label="Coordonn&eacute;es de l&apos;emplacement">
+                    <h3 class="map-info__title">Olympia Fitness</h3>
+                    <p class="map-info__item">
+                        <i class="fa fa-solid fa-location-dot" aria-hidden="true"></i>
+                        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Olympia+Fitness,+Route+des+Parties+37,+1933+Sembrancher" target="_blank" rel="noopener" class="map-info__address-link">Chapalette Centre SA<br>Route des Parties 37<br>1933 Sembrancher</a>
+                    </p>
+                    <p class="map-info__item">
+                        <i class="fa fa-solid fa-phone" aria-hidden="true"></i>
+                        <a href="tel:+41782646833">078&nbsp;264&nbsp;68&nbsp;33</a>
+                    </p>
+                    <p class="map-info__item">
+                        <i class="fa fa-solid fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:info@olympiafitness.ch">info@olympiafitness.ch</a>
+                    </p>
+                    <p class="map-info__item">
+                        <i class="fa fa-solid fa-car" aria-hidden="true"></i>
+                        <span>Parking clients disponible devant le centre</span>
+                    </p>
+                    <div class="map-cta">
+                        <a class="af-button af-white" href="https://www.google.com/maps/dir/?api=1&amp;destination=Olympia+Fitness,+Route+des+Parties+37,+1933+Sembrancher" target="_blank" rel="noopener">Itin&eacute;raire</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer af-center af-white af-padding-64">
+        <a href="#home" class="af-button af-light-grey footer-backtotop">
+            <i class="fa fa-solid fa-arrow-up af-margin-right" aria-hidden="true"></i>Retour en haut
+        </a>
+        <div class="af-xlarge af-section footer-social">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="af-hover-opacity" aria-label="Facebook">
+                <i class="fa fa-brands fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" rel="noopener" class="af-hover-opacity" aria-label="Instagram">
+                <i class="fa fa-brands fa-instagram" aria-hidden="true"></i>
+            </a>
+        </div>
+    <p class="af-opacity footer-note">Copyright 2025 - Olympia Fitness | Design by Lucha Roca and build by Site-simple.ch</p>
+    </footer>
+        <script>
+            (function () {
+                var mobileMenu = document.getElementById('mobileMenu');
+                var toggleButton = document.querySelector('.menu-toggle');
+
+                if (!mobileMenu || !toggleButton) {
+                    return;
+                }
+
+                function openMenu() {
+                    if (mobileMenu.classList.contains('is-open')) {
+                        return;
+                    }
+
+                    mobileMenu.classList.add('is-open');
+                    mobileMenu.setAttribute('aria-hidden', 'false');
+                    toggleButton.setAttribute('aria-expanded', 'true');
+                }
+
+                function closeMenu() {
+                    if (!mobileMenu.classList.contains('is-open')) {
+                        mobileMenu.setAttribute('aria-hidden', 'true');
+                        toggleButton.setAttribute('aria-expanded', 'false');
+                        return;
+                    }
+
+                    mobileMenu.classList.remove('is-open');
+                    mobileMenu.setAttribute('aria-hidden', 'true');
+                    toggleButton.setAttribute('aria-expanded', 'false');
+                }
+
+                window.toggleMobileMenu = function (event) {
+                    if (event) {
+                        event.preventDefault();
+                    }
+
+                    if (mobileMenu.classList.contains('is-open')) {
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                };
+
+                window.closeMobileMenu = function () {
+                    closeMenu();
+                };
+
+                document.addEventListener('click', function (event) {
+                    if (!mobileMenu.classList.contains('is-open')) {
+                        return;
+                    }
+
+                    if (mobileMenu.contains(event.target) || toggleButton.contains(event.target)) {
+                        return;
+                    }
+
+                    closeMenu();
+                });
+
+                document.addEventListener('keydown', function (event) {
+                    if (event.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
+                        closeMenu();
+                        toggleButton.focus();
+                    }
+                });
+
+                window.addEventListener('resize', function () {
+                    if (window.innerWidth > 900 && mobileMenu.classList.contains('is-open')) {
+                        closeMenu();
+                    }
+                });
+            })();
+
+            (function () {
+                var slider = document.querySelector('.hero-slider');
+                if (!slider) {
+                    return;
+                }
+
+                var slides = slider.querySelectorAll('.hero-slide');
+                if (slides.length === 0) {
+                    return;
+                }
+
+                var activeIndex = 0;
+                var delay = 3000;
+                var intervalId = null;
+
+                slides[activeIndex].classList.add('is-active');
+
+                function showNextSlide() {
+                    slides[activeIndex].classList.remove('is-active');
+                    activeIndex = (activeIndex + 1) % slides.length;
+                    slides[activeIndex].classList.add('is-active');
+                }
+
+                function startSlider() {
+                    if (intervalId !== null) {
+                        return;
+                    }
+
+                    intervalId = window.setInterval(showNextSlide, delay);
+                }
+
+                function stopSlider() {
+                    if (intervalId === null) {
+                        return;
+                    }
+
+                    window.clearInterval(intervalId);
+                    intervalId = null;
+                }
+
+                if (slides.length > 1) {
+                    startSlider();
+
+                    document.addEventListener('visibilitychange', function () {
+                        if (document.hidden) {
+                            stopSlider();
+                        } else {
+                            startSlider();
+                        }
+                    });
+                }
+            })();
+
+            (function () {
+                var dropdown = document.querySelector('[data-dropdown]');
+                if (!dropdown) {
+                    return;
+                }
+
+                var toggle = dropdown.querySelector('.af-dropdown-toggle');
+                var menu = dropdown.querySelector('.af-dropdown-content');
+                if (!toggle || !menu) {
+                    return;
+                }
+
+                var isOpen = false;
+                var minWidth = 220;
+                var supportsHover = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+                var scheduled = false;
+
+                function setPosition() {
+                    if (!isOpen) {
+                        return;
+                    }
+
+                    var rect = toggle.getBoundingClientRect();
+                    var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+                    var viewportMargin = 12;
+                    var width = Math.max(rect.width, minWidth);
+                    menu.style.minWidth = width + 'px';
+
+                    var menuWidth = menu.offsetWidth || width;
+                    var left = rect.left;
+                    if (left + menuWidth + viewportMargin > viewportWidth) {
+                        left = Math.max(viewportMargin, viewportWidth - menuWidth - viewportMargin);
+                    }
+
+                    menu.style.left = left + 'px';
+                    menu.style.top = rect.bottom + 2 + 'px';
+                }
+
+                function schedulePositionUpdate() {
+                    if (!isOpen || scheduled) {
+                        return;
+                    }
+
+                    scheduled = true;
+                    requestAnimationFrame(function () {
+                        scheduled = false;
+                        setPosition();
+                    });
+                }
+
+                function openMenu() {
+                    if (isOpen) {
+                        return;
+                    }
+
+                    isOpen = true;
+                    dropdown.setAttribute('data-dropdown-open', 'true');
+                    menu.hidden = false;
+                    menu.style.visibility = 'hidden';
+                    setPosition();
+                    menu.style.visibility = '';
+                    toggle.setAttribute('aria-expanded', 'true');
+                }
+
+                function closeMenu() {
+                    if (!isOpen) {
+                        return;
+                    }
+
+                    isOpen = false;
+                    dropdown.removeAttribute('data-dropdown-open');
+                    menu.hidden = true;
+                    menu.style.left = '-9999px';
+                    menu.style.top = '-9999px';
+                    menu.style.minWidth = '';
+                    toggle.setAttribute('aria-expanded', 'false');
+                }
+
+                toggle.addEventListener('click', function (event) {
+                    event.preventDefault();
+                    if (isOpen) {
+                        closeMenu();
+                    } else {
+                        openMenu();
+                    }
+                });
+
+                if (supportsHover) {
+                    dropdown.addEventListener('mouseenter', openMenu);
+                    dropdown.addEventListener('mouseleave', closeMenu);
+                }
+
+                document.addEventListener('click', function (event) {
+                    if (!isOpen) {
+                        return;
+                    }
+
+                    if (!dropdown.contains(event.target)) {
+                        closeMenu();
+                    }
+                });
+
+                document.addEventListener('touchstart', function (event) {
+                    if (!isOpen) {
+                        return;
+                    }
+
+                    if (!dropdown.contains(event.target)) {
+                        closeMenu();
+                    }
+                }, { passive: true });
+
+                document.addEventListener('keydown', function (event) {
+                    if (!isOpen) {
+                        return;
+                    }
+
+                    if (event.key === 'Escape' || event.key === 'Esc') {
+                        closeMenu();
+                        toggle.focus();
+                    }
+                });
+
+                ['scroll', 'resize'].forEach(function (evt) {
+                    window.addEventListener(evt, schedulePositionUpdate, { passive: true });
+                });
+            })();
+
+        </script>
+</body>
+</html>
