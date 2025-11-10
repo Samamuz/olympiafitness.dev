@@ -1,3 +1,72 @@
+.af-dropdown-mobile-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+}
+.af-dropdown-mobile-toggle .fa-chevron-down {
+	margin-left: auto;
+}
+/* Dropdown mobile Secteur */
+.af-dropdown-mobile {
+	position: relative;
+	display: block;
+	margin-right: 15px;
+}
+
+.af-dropdown-content-mobile {
+	position: static;
+	margin-top: 0;
+	min-width: 100%;
+	box-shadow: none;
+	border-radius: 0;
+	overflow: hidden;
+	max-height: 0;
+	opacity: 0;
+	pointer-events: none;
+	transform: translateY(-12px);
+	transition: max-height 0.3s ease, opacity 0.3s ease, padding 0.3s ease, transform 0.3s ease;
+	background: var(--color-surface, #fff);
+	z-index: 100;
+}
+
+.af-dropdown-content-mobile.is-open {
+	padding: 0.75rem 0rem 1rem;
+	max-height: 480px;
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0);
+}
+
+.af-dropdown-content-mobile a {
+	display: flex;
+	align-items: center;
+	gap: 0.65rem;
+	padding: 0.75rem 1rem;
+	border: none;
+	border-bottom: 1px solid var(--color-border);
+	background: transparent;
+	color: var(--color-text, #222);
+	text-decoration: none;
+	text-transform: uppercase;
+	font-weight: 600;
+	letter-spacing: 0.08em;
+	transition: background-color 0.2s ease, color 0.2s ease;
+	width: 100%;
+	box-sizing: border-box;
+	justify-content: flex-start;
+}
+
+.af-dropdown-content-mobile a:last-child {
+	border-bottom: none;
+}
+
+.af-dropdown-content-mobile a:hover,
+.af-dropdown-content-mobile a:focus-visible {
+	background-color: var(--color-primary, #f7e600);
+	color: #050505;
+	outline: none;
+}
 /* Also define the standard property 'appearance' for compatibility */
 /* AF.CSS 5.02 March 31 2025 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
