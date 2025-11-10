@@ -49,7 +49,17 @@
         </div>
         <nav class="mobile-menu af-hide-medium af-hide-large" id="mobileMenu" aria-hidden="true">
             <a href="#home" onclick="closeMobileMenu()" class="af-bar-item af-button">Accueil</a>
-            <a href="#button" onclick="closeMobileMenu()" class="af-bar-item af-button">Informations</a>
+            <div class="af-dropdown-mobile">
+                <button type="button" class="af-bar-item af-button af-dropdown-mobile-toggle" aria-expanded="false" aria-controls="secteur-mobile-menu" onclick="toggleSecteurMobileMenu(event)">
+                    Informations <span style="flex:1"></span><i class="fa fa-chevron-down" aria-hidden="true"></i>
+                </button>
+                <div class="af-dropdown-content-mobile" id="secteur-mobile-menu">
+                    <a href="#horaires" onclick="closeMobileMenu()">Horaires</a>
+                    <a href="#cours-collectifs" onclick="closeMobileMenu()">Cours collectifs</a>
+                    <a href="#team-olympia" onclick="closeMobileMenu()">La team Olympia</a>
+                    <a href="#tarifs" onclick="closeMobileMenu()">Tarifs</a>
+                </div>
+            </div>
             <a href="#certifications" onclick="closeMobileMenu()" class="af-bar-item af-button">Certifications</a>
             <a href="#contact" onclick="closeMobileMenu()" class="af-bar-item af-button">Contact</a>
         </nav>
@@ -152,6 +162,37 @@
         </section>
     </main>
     <footer class="site-footer af-center af-white af-padding-64">
+
+    <script>
+    function toggleSecteurMobileMenu(event) {
+        event.stopPropagation();
+        var menu = document.getElementById('secteur-mobile-menu');
+        var expanded = event.currentTarget.getAttribute('aria-expanded') === 'true';
+        if (menu) {
+            if (!expanded) {
+                menu.classList.add('is-open');
+            } else {
+                menu.classList.remove('is-open');
+            }
+            event.currentTarget.setAttribute('aria-expanded', expanded ? 'false' : 'true');
+        }
+        // Fermer le menu si on clique ailleurs
+        if (!expanded) {
+            document.addEventListener('click', closeSecteurMenuOnClickOutside);
+        } else {
+            document.removeEventListener('click', closeSecteurMenuOnClickOutside);
+        }
+    }
+    function closeSecteurMenuOnClickOutside(e) {
+        var menu = document.getElementById('secteur-mobile-menu');
+        var btn = document.querySelector('button[aria-controls="secteur-mobile-menu"]');
+        if (menu && btn && !menu.contains(e.target) && !btn.contains(e.target)) {
+            menu.classList.remove('is-open');
+            btn.setAttribute('aria-expanded', 'false');
+            document.removeEventListener('click', closeSecteurMenuOnClickOutside);
+        }
+    }
+    </script>
         <a href="#home" class="af-button af-light-grey footer-backtotop">
             <i class="fa fa-solid fa-arrow-up af-margin-right" aria-hidden="true"></i>Retour en haut
         </a>
